@@ -62,7 +62,10 @@ namespace UrlExplorer.Core.Helpers
                 "and",
                 "of",
                 "this",
-                "is"
+                "is",
+                "on",
+                "in",
+                "all"
             };
         }
     }

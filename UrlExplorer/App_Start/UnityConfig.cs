@@ -2,7 +2,7 @@ using System;
 
 using Unity;
 using UrlExplorer.Core.Services;
-using UrlExplorer.Core.Services.Interfaces;
+using UrlExplorer.Core.Interfaces;
 
 namespace UrlExplorer
 {

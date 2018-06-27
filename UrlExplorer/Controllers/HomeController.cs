@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using UrlExplorer.Core.Services;
-using UrlExplorer.Core.Services.Interfaces;
+using UrlExplorer.Core.Interfaces;
 using UrlExplorer.ViewModels;
 
 namespace UrlExplorer.Controllers

@@ -23,7 +23,7 @@ namespace UrlExplorer.Core.Services
         /// <summary>
         /// Get distinct list of words with their counts.
         /// </summary>
-        /// <param name="excludeCommonWords">Exclude common words like the, a, an, etc.</param>
+        /// <param name="excludeCommonWords">Exclude common words like the, a, an, the, etc.</param>
         /// <returns>Collection of Dtos with words and their counts.</returns>
         public IEnumerable<WordCountDto> GetWordCounts(bool excludeCommonWords)
         {

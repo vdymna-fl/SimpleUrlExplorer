@@ -7,6 +7,9 @@ using System.Web;
 
 namespace UrlExplorer.Validations
 {
+    /// <summary>
+    /// Custom URL validation using regex expression
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class SimpleUrlAttribute : ValidationAttribute
     {

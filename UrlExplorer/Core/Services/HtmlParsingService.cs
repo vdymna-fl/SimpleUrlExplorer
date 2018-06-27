@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using UrlExplorer.Core.Helpers;
-using UrlExplorer.Core.Services.Interfaces;
+using UrlExplorer.Core.Interfaces;
 
 namespace UrlExplorer.Core.Services
 {
