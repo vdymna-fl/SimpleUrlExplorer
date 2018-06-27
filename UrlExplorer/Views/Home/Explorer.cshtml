@@ -1,0 +1,54 @@
+﻿@using UrlExplorer.ViewModels
+@model ExplorerViewModel
+@{
+    ViewBag.Title = "Simple URL Explorer";
+}
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h5 class="@(Model.TotalWordCount > 0 ? "text-success" : "text-danger") text-center">Total words found <span class="badge badge-secondary">@Model.TotalWordCount</span></h5>
+    </div>
+</div>
+
+<hr />
+
+@if (Model.TotalWordCount > 0)
+{
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <h5 class="text-center">Top words</h5>
+        </div>
+    </div>
+
+    <div class="row ml-1">
+        @foreach (var word in Model.TopWords)
+        {
+            <div class="list-group col-lg-3 mb-3">
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    @word.Word
+                    <span class="badge badge-primary badge-pill">@word.Count</span>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h5 class="@(Model.TotalImageCount > 0 ? "text-success" : "text-danger") text-center">Total images found <span class="badge badge-secondary">@Model.ImageUrls.Count()</span></h5>
+    </div>
+</div>
+
+<hr />
+
+<div class="row text-center">
+    @foreach (var img in Model.ImageUrls)
+    {
+        <div class="col-lg-3 col-md-4 col-xs-6">
+            <a data-fancybox="gallery" href="@img">
+                <img class="img-fluid img-thumbnail" src=@img alt="">
+            </a>
+        </div>
+    }
+</div>
+

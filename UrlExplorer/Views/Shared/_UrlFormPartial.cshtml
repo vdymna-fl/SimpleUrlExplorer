@@ -1,0 +1,16 @@
+﻿@using UrlExplorer.ViewModels
+@model ExplorerViewModel
+
+<div class="card bg-light mt-3 mb-3">
+    <div class="card-body">
+        @using (Html.BeginForm("Explore", "Home", FormMethod.Post, new { @class = "form-group" }))
+        {
+            @Html.LabelFor(m => m.Url)
+            <div class="input-group">
+                @Html.TextBoxFor(m => m.Url, new { @class = "form-control", placeholder = "http://" })
+                <button class="btn btn-outline-success ml-2" type="submit">Explore</button>
+            </div>
+            @Html.ValidationMessageFor(m => m.Url, "", new { @class = "text-danger" })
+        }
+    </div>
+</div>
